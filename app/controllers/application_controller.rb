@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/users' do
-    @users = User.all
+    @users = User.all.sort_by {|user| user.name}
     erb :'users/index'
   end
 
@@ -76,6 +76,15 @@ class ApplicationController < Sinatra::Base
   get '/photos/:id/ratings/new' do
     @photo = Photo.find(params[:id])
     erb :'/ratings/new'
+  end
+
+  post '/photos/:id/ratings' do
+    user = User.find_or_create_by(name: params[:name])
+    rating = Rating.create(score: params[:rating])
+    rating.photo = Photo.find(params[:id])
+    rating.user = user
+    rating.save
+    redirect "/photos/#{params[:id]}/ratings"
   end
 
 

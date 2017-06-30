@@ -8,7 +8,9 @@
     <h3><%=@photo.title%></h3><br>
     <img src="<%=@photo.url%>" alt="Adorable Puppy">
     <form action="/photos/<%=@photo.id%>/ratings" method="post">
-      Enter a rating from 1-10 <input type="text" name="rating">
+      Your Name: <input type="text" name="name">
+      Enter a rating (out of 10) <input type="number" min="10" max="100" name="rating">
+      <input type="submit" name="submit" value="Submit Rating">
     </form>
   </body>
 </html>

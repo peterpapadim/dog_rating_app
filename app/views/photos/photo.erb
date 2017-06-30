@@ -11,7 +11,8 @@
     <% if @photo.ratings.count > 0 %>
     <a href="/photos/<%= @photo.id %>/ratings">View all ratings</a>
     <% end %>
-    <a href="/photos/<%= @photo.id %>/edit">Edit photo</a>
+    <a href="/photos/<%= @photo.id %>/edit">Edit</a>
+    <a href="/photos/<%= @photo.id %>/ratings/new">Rate</a>
 
   </body>
 </html>
