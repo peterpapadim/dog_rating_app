@@ -1,0 +1,6 @@
+User.create(name: "Peter")
+User.create(name: "Jeremy")
+Photo.create(title: "Peter's adorable puppy", user_id: 1)
+Photo.create(title: "Jeremy's adorable puppy", user_id: 2)
+Rating.create(photo_id: 1, user_id: 2, score: 11)
+Rating.create(photo_id: 2, user_id: 1, score: 10)
