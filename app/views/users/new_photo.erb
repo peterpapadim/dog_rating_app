@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add photo</title>
+  </head>
+  <body>
+    <form action="/users/<%= @user.id %>/photos/new" method="post">
+      <label>Photo title: </label>
+      <input type="text" name="photo[title]"><br>
+      <label>Photo url: </label>
+      <input type="text" name="photo[url]">
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+
+
+  </body>
+</html>

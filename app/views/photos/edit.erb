@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit photo</title>
+  </head>
+  <body>
+    <form action="/photos/<%= @user.id %>/edit" method="post">
+      <label>Photo title: </label>
+      <input type="text" name="photo[title]" value="<%= @photo.title %>"><br>
+      <label>Photo url: </label>
+      <input type="text" name="photo[url]" value="<%= @photo.url %>">
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+
+
+  </body>
+</html>

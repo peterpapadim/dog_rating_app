@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3><%=@photo.title%></h3><br>
+    <img src="<%=@photo.url%>" alt="Adorable Puppy">
+    <form action="/photos/<%=@photo.id%>/ratings" method="post">
+      Enter a rating from 1-10 <input type="text" name="rating">
+    </form>
+  </body>
+</html>
