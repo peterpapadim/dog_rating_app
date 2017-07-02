@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
     erb :root
   end
 
-  
+
 
   get '/users/new' do
     erb :'/users/new'
@@ -51,6 +51,10 @@ class ApplicationController < Sinatra::Base
     new_photo.user = User.find(params[:id])
     new_photo.save
     redirect "users/#{params[:id]}/photos"
+  end
+
+  get '/users/:id' do
+    redirect :"/users/#{params[:id]}/photos"
   end
 
   get '/photos/:id' do

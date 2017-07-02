@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
     <title>Photo</title>
   </head>
   <body>
@@ -14,6 +16,8 @@
     <li><%= rating.user.name %> rated this photo <%= rating.score %> / 10</li>
     <% end %>
   </ul>
+  <br>
+  <a href="/users/<%= @photo.user.id %>">Back to <%= @photo.user.name %>'s photos</a>
 
 
   </body>

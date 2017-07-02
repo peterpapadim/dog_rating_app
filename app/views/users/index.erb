@@ -2,15 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
     <title>All Puppy Lovers</title>
   </head>
   <body>
     <h2>All Puppy Lovers!</h2><br>
     <ul>
       <% @users.each do |user| %>
-      <li><a href="/users/<%= user.id %>/photos"> <%= user.name %></a></li>
+      <li><a href="/users/<%= user.id %>/photos"> <%= user.name %></a> - <%= user.photos.count %> photos</li>
       <% end %>
     </ul>
-    
+
   </body>
 </html>

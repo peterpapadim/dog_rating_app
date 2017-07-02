@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
     <title>Photo</title>
   </head>
   <body>
@@ -9,10 +11,13 @@
     <img src="<%= @photo.url %>" alt="adorable puppy"><br>
     <h3>Average rating: <%= @photo.avg_rating %></h3><br>
     <% if @photo.ratings.count > 0 %>
-    <a href="/photos/<%= @photo.id %>/ratings">View all ratings</a>
+    <a href="/photos/<%= @photo.id %>/ratings" id="er">View all ratings</a>
     <% end %>
-    <a href="/photos/<%= @photo.id %>/edit">Edit</a>
-    <a href="/photos/<%= @photo.id %>/ratings/new">Rate</a>
+    <a href="/photos/<%= @photo.id %>/edit" id="er">Edit</a>
+    <a href="/photos/<%= @photo.id %>/ratings/new" id="er">Rate</a>
+    <br>
+    <br>
+    <a href="/users/<%= @photo.user.id %>">Back to <%= @photo.user.name %>'s photos</a>
 
   </body>
 </html>
