@@ -81,6 +81,13 @@ class ApplicationController < Sinatra::Base
     redirect "/photos/#{photo.id}"
   end
 
+  get '/photos/:id/delete' do
+    @photo = Photo.find(params[:id])
+    @user = @photo.user.id
+    @photo.destroy
+    redirect :"/users/#{@user}"
+  end
+
   get '/photos/:id/ratings/new' do
     @photo = Photo.find(params[:id])
     erb :'/ratings/new'
