@@ -5,6 +5,7 @@
     <title>Photos</title>
   </head>
   <body>
+    <a href="/">Home</a> --- <a href="/users">All Users</a>
     <h1><%= @user.name %>'s Photos</h1>
     <% @user.photos.each do |photo| %>
       <%= photo.title %><br>

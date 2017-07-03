@@ -5,12 +5,13 @@
     <title>All Puppy Lovers</title>
   </head>
   <body>
+    <p><a href="/">Home</a></p>
     <h2>All Puppy Lovers!</h2><br>
     <ul>
       <% @users.each do |user| %>
       <li><a href="/users/<%= user.id %>/photos"> <%= user.name %></a></li>
       <% end %>
     </ul>
-    
+
   </body>
 </html>
