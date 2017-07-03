@@ -1,0 +1,19 @@
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: black;
+}
+
+#er {
+  display: inline-block;
+  margin-right: 22px;
+}
+
+#pup {
+  width: auto;
+  font-size: 2em;
+}
+
+#submit
+{
+  font-size: 2em;
+}
