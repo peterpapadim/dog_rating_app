@@ -7,7 +7,7 @@
     <title>Photos</title>
   </head>
   <body>
-    <a href="/">Home</a> --- <a href="/users">All Users</a>
+    <a href="/" id="er">Home</a><a href="/users" id="er">All Puppy Lovers</a>
     <h1><%= @user.name %>'s Photos</h1>
     <% @user.photos.each do |photo| %>
       <%= photo.title %><br>
@@ -16,7 +16,6 @@
       <br>
     <% end %>
     <a href="/users/<%= @user.id %>/photos/new" id="er">Add photo</a>
-    <a href="/users" id="er">All puppy lovers</a>
 
 
   </body>

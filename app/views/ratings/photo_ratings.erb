@@ -7,7 +7,9 @@
     <title>Photo</title>
   </head>
   <body>
+    <a href="/" id="er">Home</a><a href="/users" id="er">All Puppy Lovers</a><br>
     <h2><%= @photo.title %></h2>
+    <a href="/users/<%= @photo.user.id %>">Back to <%= @photo.user.name %>'s photos</a><br>
     <img src="<%= @photo.url %>" alt="adorable puppy"><br>
     <h3>Average rating: <%= @photo.avg_rating %></h3><br>
     <ul>
@@ -17,7 +19,6 @@
     <% end %>
   </ul>
   <br>
-  <a href="/users/<%= @photo.user.id %>">Back to <%= @photo.user.name %>'s photos</a>
 
 
   </body>

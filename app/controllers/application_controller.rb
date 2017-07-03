@@ -47,9 +47,11 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/users/:id/photos/new' do
-    new_photo = Photo.create(params[:photo])
-    new_photo.user = User.find(params[:id])
-    new_photo.save
+    if params[:photo][:title] && params[:photo][:url] != nil
+      new_photo = Photo.create(params[:photo])
+      new_photo.user = User.find(params[:id])
+      new_photo.save
+    end
     redirect "users/#{params[:id]}/photos"
   end
 
